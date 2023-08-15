@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif, Arial, Helvetica, SansSerif;
+}
+
+body {
+    background: linear-gradient(to right, #89CFF0, #13e5e5);
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+header img {
+    width: 36px;
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.99);
+}
+
+h1 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+}
+
+form input {
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 10px 5px; /* Ajuste o padding vertical para aumentar a altura */
+    margin-right: 10px;
+}
+
+form button {
+    background: linear-gradient(to right, #FFA400, #FF4E00); /* Gradiente de laranja */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Transição suave ao passar o mouse */
+    height: 38px;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #FF4E00, #FFA400); /* Gradiente invertido ao passar o mouse */
+}
+
+/* Estilos anteriores permanecem iguais... */
+
+#btnUpdate {
+    background: linear-gradient(to right, #FFA400, #FF4E00); /* Gradiente de laranja */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Transição suave ao passar o mouse */
+    margin-left: 10px; /* Adicionei um espaçamento entre os botões */
+}
+
+#btnUpdate:hover {
+    background: linear-gradient(to right, #FF4E00, #FFA400); /* Gradiente invertido ao passar o mouse */
+}
+
+
+#search-container {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+
+#search {
+    padding: 5px;
+    font-size: 16px;
+    width: 60%;
+    margin-right: 10px;
+}
+
+#btnSearch {
+    background: linear-gradient(to right, #00C853, #00796B); /* Gradiente de verde */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* Espaçamento interno */
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+#btnSearch:hover {
+    background: linear-gradient(to right, #00796B, #00C853); /* Gradiente invertido ao passar o mouse */
+}
+
+.column-highlight {
+    background-color: #fce16c; /* Cor de destaque que você desejar */
+}
+
+#btnEdit {
+    background: linear-gradient(to right, #FFEC19, #FFAA00); /* Gradiente de amarelo */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#btnEdit:hover {
+    background: linear-gradient(to right, #FFAA00, #FFEC19); /* Gradiente invertido ao passar o mouse */
+}
+
+#btnDelete {
+    background: #D32F2F; /* Vermelho escuro */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#btnDelete:hover {
+    background: #B71C1C; /* Vermelho mais escuro ao passar o mouse */
+}
+
+.highlight {
+    background-color: #fce16c; /* Você pode escolher outra cor se preferir */
+    font-weight: bolder;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    border-bottom: 2px solid #000000;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+table td {
+    padding: 8px 0;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}

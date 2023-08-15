@@ -1,0 +1,76 @@
+Tema: Construção de um Site de Portfólio
+Parte 1: Estrutura Básica - HTML
+
+Estrutura Global:
+Usamos a tag <!DOCTYPE html> para definir o tipo de documento.
+A tag <html> envolve todo o nosso código HTML.
+Dentro dela, temos o <head>, que contém metadados, como o conjunto de caracteres e o título da página.
+O <body> contém o conteúdo visível da página.
+
+Header:
+Inserido usando a tag <header>.
+Dentro dele, temos uma imagem (representando o logotipo) e um título principal (<h1>). O título pode ser algo como "Meu Portfólio".
+
+Seção Principal (<main>):
+Pode conter uma breve introdução sobre você ou seus trabalhos.
+Uma lista (<ul>) de projetos, com cada projeto dentro de um item da lista (<li>). Cada projeto pode ter um título (<h2>), uma imagem e uma descrição.
+
+Formulário de Contato (<form>):
+Com campos (<input>) para nome, e-mail e mensagem.
+Um botão (<button>) para enviar.
+
+Footer (<footer>):
+Com links para redes sociais ou uma mensagem de direitos autorais.
+
+
+Parte 2: Estilização - CSS
+Reset:
+Usamos regras como margin: 0; e padding: 0; para remover margens e preenchimentos padrão.
+box-sizing: border-box; garante que o padding e a borda sejam incluídos na largura/altura total do elemento.
+
+Estilos Globais:
+Para o corpo do site, definimos um gradiente de fundo usando linear-gradient e um padding-top para adicionar algum espaço no topo.
+Para a fonte, escolhemos 'Arial', mas se ela não estiver disponível, a fonte irá reverter para qualquer fonte sans-serif padrão do sistema.
+
+Estilos Específicos:
+O cabeçalho tem estilos específicos como display: flex; para alinhar itens horizontalmente.
+Para imagens no cabeçalho, definimos uma largura específica e margem.
+Títulos (<h1>) possuem um tamanho de fonte específico, peso e cor. Além disso, há um efeito de sombra no texto.
+E muitos outros estilos para os botões, campos de formulário e outros elementos.
+
+
+Parte 3: Interatividade - JavaScript
+Quando falamos sobre adicionar interatividade a um site, estamos realmente falando sobre como o site responde às ações dos usuários. Para isso, usamos o JavaScript para "escutar" eventos e, em seguida, reagir a esses eventos de maneira programada.
+
+Animação para Exibir Projetos:
+Lógica: Queremos que os visitantes do site possam ver mais informações sobre um projeto específico sem sobrecarregar a visualização inicial. Para isso, ocultamos inicialmente os detalhes e permitimos que sejam revelados com um clique.
+
+Passo a passo:
+a. Seleção de Elementos: Antes de tudo, temos que ter acesso ao botão "Ver Mais" e ao conteúdo que queremos mostrar/ocultar. Para isso, usamos funções como document.querySelector() ou document.getElementById().
+
+b. Adicionando Eventos: Uma vez que tenhamos referenciado o botão, adicionamos um "ouvinte de evento" para o evento de clique. Isso é feito através do método .addEventListener().
+
+c. Manipulando o DOM: Quando o botão é clicado, executamos uma função que verifica se o conteúdo está visível ou não (pode ser através da propriedade display do CSS). Dependendo do estado atual, alteramos essa propriedade para mostrar ou ocultar o conteúdo.
+
+Formulário de Contato Funcional:
+Lógica: Ao enviar um formulário, a ação padrão é recarregar a página. Queremos evitar isso e, em vez disso, fornecer um feedback instantâneo ao usuário.
+
+Passo a passo:
+a. Seleção de Elementos: Primeiro, obtemos uma referência ao formulário usando, por exemplo, document.querySelector('form').
+
+b. Prevenindo Ações Padrão: Ao adicionar um ouvinte de evento para o "envio" do formulário (submit), usamos a função preventDefault() do evento para evitar que a página seja recarregada.
+
+c. Fornecendo Feedback: Em seguida, podemos mostrar uma mensagem de agradecimento ou, se estivermos usando AJAX, podemos enviar os dados do formulário para um servidor e esperar por uma resposta.
+
+Mudança de Tema:
+Lógica: Em sites modernos, os usuários gostam de poder escolher entre um tema claro e escuro. Podemos usar o JavaScript para alternar entre esses temas dinamicamente.
+
+Passo a passo:
+a. Seleção de Elementos: Obtemos uma referência ao botão que será usado para alternar os temas e também ao elemento <body> (ou ao elemento raiz), que geralmente é o alvo das mudanças de tema.
+
+b. Ouvindo Cliques: Adicionamos um ouvinte de evento para o clique do botão.
+
+c. Alternando Temas: Na função ativada pelo clique, verificamos a classe atual do elemento <body>. Se estiver no tema claro, mudamos para o escuro e vice-versa. Fazemos isso alternando uma classe CSS, que tem as definições para cada tema.
+
+Conclusão:
+O JavaScript é a ponte entre a interação do usuário e as mudanças dinâmicas no site. Ele permite que reajamos a eventos e modifiquemos o conteúdo, estilo ou comportamento do site em tempo real. A lógica central do JavaScript gira em torno de ouvir eventos, reagir a eles e manipular o DOM (Document Object Model) de acordo. Ao entender esses conceitos fundamentais e como eles se interligam, conseguimos criar experiências web ricas e interativas.

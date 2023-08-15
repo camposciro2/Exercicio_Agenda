@@ -1,0 +1,39 @@
+Explicação Detalhada:
+
+Estrutura do Documento:
+
+<!DOCTYPE html>: Declaração do tipo de documento. Indica que este é um documento HTML5.
+
+<html lang="pt-BR">: A tag raiz do documento HTML que define a linguagem do documento como português do Brasil.
+
+Cabeçalho do Documento:
+
+<head>: Contém metadados e informações que não são exibidas no conteúdo principal da página.
+
+<meta charset="UTF-8">: Define a codificação de caracteres do documento como UTF-8.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Ajusta a visualização para dispositivos de diferentes tamanhos, especialmente útil para dispositivos móveis.
+
+<title>Meu Primeiro Site</title>: Define o título da página que é exibido na aba do navegador.
+
+Corpo do Documento:
+
+<body>: Contém o conteúdo visível da página.
+
+<header>: Representa um container para conteúdo introdutório ou um conjunto de links de navegação.
+
+<img src="logo.png" alt="Logotipo do Site">: Uma imagem que serve como logotipo do site. O atributo alt fornece uma descrição textual da imagem, que é útil para acessibilidade.
+
+<h1>Bem-vindo ao meu site</h1>: O título principal da página.
+
+<main>: Representa o conteúdo principal do documento, exclusivo da página.
+
+<section>: Representa uma seção independente do documento, como um capítulo, guia ou aba.
+
+<h2>Sobre mim</h2>: Um subtítulo para a seção.
+
+<p>Olá, eu sou o João, e este é um pequeno texto sobre mim...</p>: Um parágrafo de texto descritivo sobre a seção. Existem três seções similares com diferentes subtítulos e descrições: "Sobre mim", "Projetos" e "Contato".
+
+<footer>: Representa o rodapé do documento ou de uma seção.
+
+<p>Todos os direitos reservados - João 2023</p>: Um parágrafo indicando direitos autorais.

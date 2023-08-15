@@ -1,0 +1,73 @@
+Reset CSS:
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif, Arial, Helvetica, SansSerif;
+}
+
+Explicação:
+Esta é uma técnica comum usada no início de muitos arquivos CSS chamada "Reset CSS". Aqui, todos os elementos (*) têm suas margens (margin) e preenchimentos (padding) zerados para evitar inconsistências entre navegadores. O box-sizing definido como border-box garante que a largura e a altura de um elemento incluam seu preenchimento e borda, não apenas seu conteúdo. Por fim, define-se a família de fonte padrão para os elementos.
+
+
+Corpo do Documento:
+body {
+    background: linear-gradient(to right, #89CFF0, #13e5e5);
+    padding-top: 100px;
+}
+
+Explicação:
+O corpo (body) do documento tem um gradiente linear como plano de fundo que flui da esquerda (to right) de uma cor azul clara (#89CFF0) para uma cor turquesa (#13e5e5). Além disso, há um preenchimento no topo (padding-top) de 100 pixels para dar algum espaço antes do conteúdo começar.
+
+
+Cabeçalho:
+header {
+    display: flex;
+    align-items: center;
+    margin: 40px;
+}
+
+header img {
+    width: 36px;
+    margin-right: 16px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff8d5b;
+}
+
+Explicação:
+O cabeçalho (header) é formatado como um container flexível, alinhando os itens ao centro na vertical. Tem uma margem externa de 40 pixels. Dentro do cabeçalho, imagens (img) têm uma largura fixa de 36 pixels e uma margem à direita, provavelmente para separá-las de um texto ou título adjacente. O título (h1) no cabeçalho tem um tamanho de fonte de 40 pixels, é negrito e tem uma cor laranja.
+
+
+Sombra do Texto:
+h1 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+Explicação:
+Todas as tags h1 no documento têm uma sombra de texto. A sombra é configurada para aparecer em todas as quatro direções (superior esquerda, superior direita, inferior esquerda, inferior direita), proporcionando um efeito de relevo ou 3D ao texto.
+
+
+Container:
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+Explicação:
+O .container é uma classe comumente usada para centralizar e conter o conteúdo em uma largura específica. Neste caso, a largura máxima é de 960 pixels, mas a largura é flexível até 100% (útil para dispositivos menores). A propriedade margin: 0 auto; centraliza o container horizontalmente.
+
+
+Formulário:
+O formulário tem uma série de estilos aplicados para dar uma aparência mais moderna e atraente. Usa-se o flexbox para alinhar os itens e definir espaçamentos. Os inputs possuem estilos específicos, como uma borda inferior e preenchimento ajustado. Os botões dentro do formulário são estilizados com gradientes, transições para efeitos de hover e outros detalhes visuais para melhorar a experiência do usuário.
+
+
+Botões:
+Cada botão (#btnUpdate, #btnSearch, #btnEdit, #btnDelete) tem estilos semelhantes, mas com cores distintas para representar diferentes ações. Todos eles têm gradientes de cores, efeitos de transição ao passar o mouse e outras propriedades para torná-los visualmente atraentes.
+
+
+Tabela:
+A tabela e seus elementos internos (th e td) são estilizados para ter um visual limpo e organizado. Espaçamentos, bordas e outros estilos são aplicados para melhorar a legibilidade e a estética.

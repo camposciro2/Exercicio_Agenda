@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda Telefônica</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="Midia/logoAgenda.png" alt="Logo Agenda">
+        <h1>Agenda Telefônica</h1>
+    </header>
+
+
+    <form id="form-input-label">
+        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome." required>
+
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o seu sobrenome.">
+
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número" required>
+
+        <button type="submit" title="Clique para cadastrar">Cadastrar</button>
+
+        <button id="btnUpdate" title="Clique para atualizar">Atualizar</button>
+    </form>
+
+    <div id="search-container">
+        <input type="text" id="search" placeholder="Digite o nome ou sobrenome...">
+        <button id="btnSearch" title="Clique para realizar a busca">Buscar</button>
+        <button id="btnEdit" title="Clique para editar">Editar</button>
+        <button id="btnDelete" title="Clique para excluir">Excluir</button>
+    </div>
+
+    <table cellspacing="0">
+        <thead>
+        <tr>
+            <th></th> <!-- Coluna para o checkbox -->
+            <th>Nº</th>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="checkbox" class="contact-checkbox"></td> <!-- Checkbox para a entrada -->
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+Evento Principal: Carregamento do Documento
+Código:
+
+        document.addEventListener("DOMContentLoaded", function () {...});
+
+Explicação:
+O método addEventListener do objeto document é usado para registrar um evento no documento inteiro. Neste caso, o evento é "DOMContentLoaded", que é disparado quando o documento HTML foi completamente carregado e analisado, mas sem esperar por folhas de estilo, imagens e subframes para terminar o carregamento. Usar este evento garante que o script só será executado depois que todos os elementos do DOM estiverem acessíveis.
+
+
+Função: formatarTelefone
+Código:
+
+        function formatarTelefone() {...}
+
+Explicação:
+A função formatarTelefone foi criada especificamente para formatar números de telefone inseridos pelo usuário. Ela é vinculada ao elemento de entrada do telefone e é acionada sempre que o usuário insere ou altera o valor (evento "input"). Usando expressões regulares, ele remove quaisquer caracteres que não sejam dígitos e, em seguida, aplica um formato específico, dependendo da quantidade de dígitos inseridos (10 ou 11).
+Isso é particularmente útil para manter uma consistência na forma como os números de telefone são exibidos, independentemente de como o usuário os insere.
+
+
+Função: adicionarContatoATabela
+Código:
+
+        function adicionarContatoATabela(nomeCompleto, telefone) {...}
+
+Explicação:
+Essa função pega dois argumentos - nomeCompleto e telefone - e os adiciona como uma nova linha na tabela de contatos. Ela cria dinamicamente uma linha da tabela (elemento tr) e insere células (elementos td) que contêm um checkbox e os detalhes do contato. Depois de montar essa linha, ela é anexada ao corpo da tabela.
+Isso permite que o site adicione novos contatos à lista sem a necessidade de recarregar a página ou fazer chamadas ao banco de dados em tempo real.
+
+
+Função: renumerarContatos
+Código:
+
+        function renumerarContatos() {...}
+
+Explicação:
+A função renumerarContatos é uma função de utilidade que atribui a cada contato um número único, facilitando a referência. Ela percorre todas as linhas da tabela de contatos e verifica o conteúdo da célula do nome. Se o nome for "----", isso indica uma entrada inválida ou vazia, então a coluna de número é definida como 0. Caso contrário, um número incremental é dado.
+Esse método garante que cada contato tenha uma identificação única, mesmo que alguns contatos sejam excluídos ou editados.
+
+
+Função: buscarContato
+Código:
+
+        function buscarContato(query) {...}
+
+Explicação:
+A função buscarContato é uma função de busca simples. Ela pega uma string de consulta, query, e compara com o nome de cada contato na tabela. Se houver uma correspondência, a linha correspondente é destacada e seu checkbox é marcado. Isso facilita a localização visual de contatos específicos em uma lista possivelmente longa.
+
+
+Função: adicionarEventosCheckbox
+Código:
+
+        function adicionarEventosCheckbox() {...}
+
+Explicação:
+Como o nome sugere, adicionarEventosCheckbox é responsável por adicionar interatividade aos checkboxes presentes em cada linha da tabela. Para cada checkbox, ela adiciona um "event listener" que monitora mudanças no seu estado. Se um checkbox é marcado, a linha da tabela correspondente é destacada, tornando mais fácil para o usuário ver quais contatos foram selecionados.
+
+
+Interações do Usuário:
+1. Editar contato:
+
+Quando o botão "btnEdit" é pressionado, ele busca por linhas da tabela que estão atualmente destacadas (indicando seleção). Se apenas uma linha estiver selecionada, os detalhes do contato dessa linha são extraídos e preenchidos nos campos de entrada apropriados, permitindo ao usuário editar as informações. Depois disso, a linha original é removida da tabela.
+
+
+
+2. Buscar contato:
+
+O botão "btnSearch" desencadeia a função buscarContato quando pressionado, que, como descrito anteriormente, destaca e marca contatos que correspondem à consulta de busca inserida pelo usuário.
+
+
+3. Deletar contato:
+
+O botão "btnDelete" verifica todos os checkboxes na tabela para ver quais estão marcados. Para cada checkbox marcado, a linha correspondente da tabela (contendo os detalhes do contato) é removida.
+
+
+4. Enviar formulário:
+
+Quando o formulário é submetido (por exemplo, quando o usuário pressiona o botão "Cadastrar"), a função vinculada previne a ação padrão do formulário (que geralmente envolve enviar os detalhes do formulário para um servidor). Em vez disso, ele extrai os valores dos campos de entrada, os adiciona à tabela como um novo contato e, em seguida, limpa os campos de entrada.
+
+
+5. Atualizar contato:
+
+Funciona de forma semelhante ao botão "Editar", mas com a adição de renumerar os contatos após a edição.
